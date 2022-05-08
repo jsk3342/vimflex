@@ -1,0 +1,86 @@
+/* Reset */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.ir {
+    overflow: hidden;
+    border: 0;
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+/* Layout */
+body {
+    background-color: black;
+}
+
+.header {
+    padding: 40px 0;
+    background-color: #222;
+    color: #999;
+}
+.wrap {
+    display: flex;
+    gap: 30px;
+    margin: 30px auto;
+}
+
+.contents-wrap {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.contents-wrap.bg {
+    display: flex;
+    align-items: center;
+}
+
+.contents-wrap.bg::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 130px;
+    height: 130px;
+    background-image: url(./images/anger.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    margin-bottom: -40px;
+
+}
+
+
+
+
+
+.menu {
+    width: 200px;
+    border: 1px solid orange;
+    flex-shrink: 0;
+}
+
+.contents {
+    flex-grow: 1;
+    border: 1px solid orange;
+}
+
+/* Design */
+.header-cover {
+    width: 220px;
+}
+
+.header-contents {
+}
