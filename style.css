@@ -1,12 +1,23 @@
 /* Reset */
-body, h1, p {
+body, p, h1, h2, h3, h4, ul, button {
     margin: 0;
     padding: 0;
 }
 
-h1 {
+h1, h2, h3, h4 {
     font-size: inherit;
     font-weight: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    background-color: inherit;
 }
 
 .ir {
@@ -23,14 +34,16 @@ h1 {
 /* Layout */
 body {
     background-color: black;
+    color: #999;
+    word-break: keep-all;
 }
 
 .header {
     padding: 40px 0;
     background-color: #222;
-    color: #999;
 }
-.wrap {
+
+.wrap.wrap {
     display: flex;
     gap: 30px;
     margin: 30px auto;
@@ -59,28 +72,118 @@ body {
     background-size: cover;
     background-position: right bottom;
     margin-bottom: -40px;
-
 }
-
-
-
-
 
 .menu {
     width: 200px;
-    border: 1px solid orange;
     flex-shrink: 0;
 }
 
 .contents {
     flex-grow: 1;
-    border: 1px solid orange;
 }
 
 /* Design */
+
+/* header */
 .header-cover {
     width: 220px;
 }
 
-.header-contents {
+.header-contents::before {
+    content: " ";
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background-color: #999;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+
+/* nav */
+.menu-btn {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(./images/icon.png);
+    background-size: cover;
+}
+
+.menu-title {
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu-list {
+    background-color: #222;
+    overflow: hidden;
+}
+
+.menu-list-category h4 {
+    font-size: 20px;
+    padding: 10px;
+    color: lightcoral;
+    border-top: 2px solid;
+}
+
+.menu-list-category button {
+    display: block;
+    width: 100%;
+    padding: 3px;
+    text-align: inherit;
+    border-bottom: 1px solid;
+    margin-left: 15px;
+}
+
+.menu-list-category button:last-child {
+    border-bottom: none;
+    padding-bottom: 15px;
+}
+
+/* contents */
+.movie-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.movie-list-card {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movie-list-card div {
+    padding-top: 56%;
+    position: relative;
+}
+
+.movie-list-card div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.movie-list-card-detail {
+    padding: 15px;
+    background-color: #222;
+    line-height: 1.2;
+}
+
+.movie-list-card-detail h4 {
+    color: lightpink;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.movie-list-card-detail button {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    letter-spacing: 0.2em;
+    background-color: black;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: red;
 }
