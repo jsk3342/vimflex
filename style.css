@@ -50,7 +50,7 @@ body {
 }
 
 .contents-wrap {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
 }
@@ -145,6 +145,7 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .movie-list-card {
